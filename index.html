@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Uplink Protocol</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Boot Screen -->
-  <div class="boot-screen" id="bootScreen">
-    <div class="boot-text" id="bootText">
-      <p>INITIALIZING SYSTEM...</p>
+  <div class="day-clock-wrapper">
+    <div class="day-clock-card">
+      <h2>Uplink Protocol</h2>
+      <p>Clicks: <span id="clickCount">0</span></p>
     </div>
   </div>
 
-  <!-- Success Transition -->
-  <div class="success-screen" id="successScreen">
-    <h1>SYSTEM RESTART SUCCESSFUL</h1>
-  </div>
+  <div class="schedule-row">
+    <div class="schedule-card">
+      <h3>Main Terminal</h3>
+      <p>Click the button to gain data packets.</p>
+      <button id="clickerBtn">Send Packet</button>
+    </div>
 
-  <!-- Main Clicker Interface -->
-  <div class="main" id="mainContent">
-    <h1>Uplink Protocol</h1>
-    <p id="storyLog">[System offline.]</p>
-    <button id="startButton">Start System</button>
-
-    <div id="clickerGame" class="clicker">
-      <p>Data Fragments: <span id="dataCount">0</span></p>
-      <button id="collectButton">Collect Data</button>
+    <div class="schedule-card">
+      <h3>Upgrade Shop</h3>
+      <div id="shop"></div>
     </div>
   </div>
 
