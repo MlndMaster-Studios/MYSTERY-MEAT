@@ -1,154 +1,56 @@
-/* ====== CORE AESTHETIC ====== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #100018, #240046, #3b0080, #100018);
-  background-size: 400% 400%;
-  animation: bgFlow 18s ease infinite;
-  color: #e8e8ff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-@keyframes bgFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.wrapper {
-  width: 90%;
-  max-width: 800px;
+  background: black;
+  color: #00ff9d;
+  font-family: "Courier New", monospace;
   text-align: center;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-/* ====== HEADER ====== */
-header h1 {
-  font-size: 2.2rem;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
+.boot-screen {
+  background: black;
+  color: #00ff9d;
+  font-size: 1.2em;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-header h1 span {
-  background: linear-gradient(270deg, #a78bfa, #7c3aed, #1e1b4b);
-  background-size: 600% 600%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: textGlow 6s ease infinite;
+.main {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes textGlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.tagline {
-  color: #c3c1ff;
-  font-size: 0.95rem;
-  opacity: 0.85;
-  margin-bottom: 2rem;
-}
-
-/* ====== MAIN DISPLAY ====== */
-.display {
-  margin-bottom: 2rem;
-}
-
-.screen {
-  background: rgba(30, 41, 59, 0.55);
-  backdrop-filter: blur(12px) saturate(160%);
-  border: 1px solid rgba(139, 92, 246, 0.25);
-  border-radius: 18px;
-  padding: 1.5rem;
-  margin-bottom: 1rem;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-}
-
-#output {
-  font-size: 1rem;
-  color: #e0d7ff;
-  text-shadow: 0 0 6px rgba(139,92,246,0.25);
-  min-height: 1.5em;
-}
-
-/* ====== BUTTON ====== */
-#main-btn {
+button {
+  background: transparent;
+  color: #00ff9d;
+  border: 1px solid #00ff9d;
+  padding: 10px 20px;
+  font-size: 1em;
   cursor: pointer;
-  background: linear-gradient(135deg, #8b5cf6, #4f46e5);
-  color: #fff;
-  border: none;
-  border-radius: 12px;
-  padding: 0.6rem 1.4rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-  background-size: 400% 400%;
-  animation: btnShift 8s ease infinite;
+  transition: background 0.2s;
 }
 
-@keyframes btnShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+button:hover {
+  background: #00ff9d;
+  color: black;
 }
 
-#main-btn:hover {
-  filter: brightness(1.1);
-  box-shadow: 0 8px 24px rgba(139,92,246,0.35);
-  transform: translateY(-3px);
+.fade-out {
+  animation: fadeOut 1s forwards;
 }
 
-/* ====== WIDGETS ====== */
-.widgets {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-}
-
-.widget-card {
-  background: rgba(30, 41, 59, 0.55);
-  backdrop-filter: blur(10px) saturate(150%);
-  border-radius: 14px;
-  padding: 1rem;
-  border: 1px solid rgba(139,92,246,0.15);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-  transition: all 0.3s ease;
-}
-
-.widget-card:hover {
-  border-color: rgba(139,92,246,0.35);
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(139,92,246,0.25);
-}
-
-.widget-card h3 {
-  margin-bottom: 0.4rem;
-  font-weight: 600;
-  color: #e0d7ff;
-}
-
-.widget-card p {
-  color: #c3c1ff;
-  font-size: 0.9rem;
-}
-
-/* ====== FOOTER ====== */
-footer {
-  margin-top: 2rem;
-  opacity: 0.8;
-}
-
-footer p {
-  font-size: 0.8rem;
-  color: #b5b3f7;
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
 }
