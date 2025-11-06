@@ -91,7 +91,7 @@
       const title = el.querySelector('h3')?.innerText.toLowerCase() || '';
       const meta = el.querySelector('.meta')?.innerText.toLowerCase() || '';
 
-      const matchesStars = starFilter === 'all' ? true : (stars >= parseInt(starFilter, 10));
+      const matchesStars = starFilter === 'all' ? true : (stars === parseInt(starFilter, 10));
       const matchesQuery = !query || title.includes(query) || meta.includes(query);
 
       el.style.display = (matchesStars && matchesQuery) ? '' : 'none';
