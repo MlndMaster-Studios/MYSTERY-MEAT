@@ -143,3 +143,19 @@ h1 span{ background: linear-gradient(90deg,var(--accent1),var(--accent2)); -webk
   background-color: var(--bg2);
   color: var(--muted);
 }
+
+.mark-purchased {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--muted);
+  border-radius: 6px;
+  padding: 4px 7px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.mark-purchased:hover {
+  background: var(--accent1);
+  color: white;
+  border-color: var(--accent1);
+}
