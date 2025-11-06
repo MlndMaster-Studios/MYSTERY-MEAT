@@ -111,3 +111,17 @@ h1 span{ background: linear-gradient(90deg,var(--accent1),var(--accent2)); -webk
   .items{ grid-template-columns:1fr; }
   .wish .wish-actions{ min-width:64px; }
 }
+.bulk button {
+  padding: 9px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.04);
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.15s ease;
+}
+.bulk button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(90deg, var(--accent2), var(--accent1));
+}
